@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 
 
 @Import({AppV1Config.class, AppV2Config.class})
-@SpringBootApplication(scanBasePackages = "hello.proxy.app")
+@SpringBootApplication(scanBasePackages = "kr.co.taxnet.migration.proxystart.hello.proxy.app")
 public class ProxyStartApplication {
 
     public static void main(String[] args) {
