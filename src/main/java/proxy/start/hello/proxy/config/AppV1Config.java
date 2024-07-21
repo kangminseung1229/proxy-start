@@ -1,8 +1,6 @@
 package proxy.start.hello.proxy.config;
 
 
-import hello.proxy.proxystart.hello.proxy.app.v1.*;
-import kr.co.taxnet.migration.proxystart.hello.proxy.app.v1.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import proxy.start.hello.proxy.app.v1.*;
