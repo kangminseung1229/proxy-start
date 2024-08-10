@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 import proxy.start.hello.proxy.config.DynamicProxyBasicConfig;
+import proxy.start.hello.proxy.config.DynamicProxyFilterConfig;
 import proxy.start.hello.proxy.config.v1_proxy.ConcreteProxyConfig;
 import proxy.start.hello.proxy.config.v1_proxy.InterfaceProxyConfig;
 import proxy.start.hello.proxy.trace.LogTrace;
@@ -18,7 +19,7 @@ import proxy.start.hello.proxy.trace.threadlocal.code.ThreadLocalLogTrace;
 //@Import({AppV1Config.class, AppV2Config.class})
 //@Import(InterfaceProxyConfig.class)
 //@Import(ConcreteProxyConfig.class)
-@Import(DynamicProxyBasicConfig.class)
+@Import(DynamicProxyFilterConfig.class)
 @SpringBootApplication(scanBasePackages = "proxy.start.hello.proxy.app.v1")
 @Slf4j
 public class ProxyStartApplication {
