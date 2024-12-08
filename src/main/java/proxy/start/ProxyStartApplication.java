@@ -12,6 +12,7 @@ import proxy.start.hello.proxy.config.DynamicProxyBasicConfig;
 import proxy.start.hello.proxy.config.DynamicProxyFilterConfig;
 import proxy.start.hello.proxy.config.v1_proxy.ConcreteProxyConfig;
 import proxy.start.hello.proxy.config.v1_proxy.InterfaceProxyConfig;
+import proxy.start.hello.proxy.config.v3_proxyfactory.ProxyFactoryConfigV1;
 import proxy.start.hello.proxy.trace.LogTrace;
 import proxy.start.hello.proxy.trace.threadlocal.code.ThreadLocalLogTrace;
 
@@ -19,8 +20,9 @@ import proxy.start.hello.proxy.trace.threadlocal.code.ThreadLocalLogTrace;
 //@Import({AppV1Config.class, AppV2Config.class})
 //@Import(InterfaceProxyConfig.class)
 //@Import(ConcreteProxyConfig.class)
-@Import(DynamicProxyFilterConfig.class)
-@SpringBootApplication(scanBasePackages = "proxy.start.hello.proxy.app.v1")
+//@Import(DynamicProxyFilterConfig.class)
+@Import(ProxyFactoryConfigV1.class)
+@SpringBootApplication(scanBasePackages = "proxy.start.hello.proxy.app.v3")
 @Slf4j
 public class ProxyStartApplication {
 
@@ -29,9 +31,7 @@ public class ProxyStartApplication {
     }
 
     @Bean
-    public LogTrace logTrace(){
-        log.trace("logtrace 빈등록");
+    public LogTrace logTrace() {
         return new ThreadLocalLogTrace();
     }
-
 }
