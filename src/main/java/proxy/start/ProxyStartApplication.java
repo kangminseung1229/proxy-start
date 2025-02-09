@@ -15,6 +15,7 @@ import proxy.start.hello.proxy.config.v1_proxy.InterfaceProxyConfig;
 import proxy.start.hello.proxy.config.v3_proxyfactory.ProxyFactoryConfigV1;
 import proxy.start.hello.proxy.config.v3_proxyfactory.ProxyFactoryConfigV2;
 import proxy.start.hello.proxy.config.v4_postprocessor.postprocessor.BeanPostProcessorConfig;
+import proxy.start.hello.proxy.config.v6_aop.AopConfig;
 import proxy.start.hello.proxy.trace.LogTrace;
 import proxy.start.hello.proxy.trace.threadlocal.code.ThreadLocalLogTrace;
 
@@ -25,7 +26,8 @@ import proxy.start.hello.proxy.trace.threadlocal.code.ThreadLocalLogTrace;
 //@Import(DynamicProxyFilterConfig.class)
 //@Import(ProxyFactoryConfigV1.class)
 //@Import(ProxyFactoryConfigV2.class)
-@Import(BeanPostProcessorConfig.class)
+//@Import(BeanPostProcessorConfig.class)
+@Import(AopConfig.class)
 @SpringBootApplication(scanBasePackages = "proxy.start.hello.proxy.app")
 @Slf4j
 public class ProxyStartApplication {
