@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Import(TraceAspect.class)
+@Import({TraceAspect.class, RetryAspect.class})
 @SpringBootTest
 public class ExamTest {
 

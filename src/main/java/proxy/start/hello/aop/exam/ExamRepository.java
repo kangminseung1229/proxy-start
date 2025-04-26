@@ -2,6 +2,7 @@ package proxy.start.hello.aop.exam;
 
 
 import org.springframework.stereotype.Repository;
+import proxy.start.hello.aop.exam.annotation.Retry;
 import proxy.start.hello.aop.exam.annotation.Trace;
 
 @Repository
@@ -15,6 +16,7 @@ public class ExamRepository {
      * @return
      */
     @Trace
+    @Retry(value = 4)
     public String save(String itemId) {
         seq++;
         if (seq % 5 == 0) {
