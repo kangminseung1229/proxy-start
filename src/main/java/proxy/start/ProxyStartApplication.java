@@ -28,7 +28,7 @@ import proxy.start.hello.proxy.trace.threadlocal.code.ThreadLocalLogTrace;
 //@Import(ProxyFactoryConfigV2.class)
 //@Import(BeanPostProcessorConfig.class)
 @Import(AopConfig.class)
-@SpringBootApplication(scanBasePackages = "proxy.start.hello.aop.exam")
+@SpringBootApplication(scanBasePackages = "proxy.start.hello.aop")
 @Slf4j
 public class ProxyStartApplication {
 
